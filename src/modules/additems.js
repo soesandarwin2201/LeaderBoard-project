@@ -1,12 +1,11 @@
-import { addLocalStorage , getLocalStorage } from "./localStorage.js";
+import { addLocalStorage, getLocalStorage } from './localStorage.js';
 
-const submitBtn = document.getElementById('submit-btn');
 const container = document.getElementById('scores-container');
 const name = document.getElementById('name');
 const score = document.getElementById('score');
 
 function addScore(event) {
-  // event.preventDefault();
+  event.preventDefault();
   const person = name.value;
   const personScore = score.value;
   const id = Date.now().toString();
@@ -23,22 +22,13 @@ function addScore(event) {
    <td class="scores">${personScore}</td>`.trim();
 
     container.appendChild(tableRow);
-    addLocalStorage(id,person,personScore);
+    addLocalStorage(id, person, personScore);
     name.value = '';
     score.value = '';
   }
 }
 
-function display() {
- let people = getLocalStorage();
- if(people.length > 0 ) {
-  people.forEach((onePerson) => {
-   displayScore(onePerson.id, onePerson.person, onePerson.personScore);
-  });
- }
-}
-
-function displayScore( id, person, personScore ) {
+function displayScore(id, person, personScore) {
   const tableRow = document.createElement('tr');
   const attribute = document.createAttribute('data-id');
   attribute.value = id;
@@ -52,4 +42,13 @@ function displayScore( id, person, personScore ) {
   container.appendChild(tableRow);
 }
 
-export { addScore , displayScore , display };
+function display() {
+  const people = getLocalStorage();
+  if (people.length > 0) {
+    people.forEach((onePerson) => {
+      displayScore(onePerson.id, onePerson.person, onePerson.personScore);
+    });
+  }
+}
+
+export { addScore, displayScore, display };

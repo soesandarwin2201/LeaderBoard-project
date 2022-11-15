@@ -1,64 +1,64 @@
 * {
- margin: 0;
- padding: 0;
- box-sizing: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
- background-color: #fff;
- color: #000;
- font-size: .89rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 0.89rem;
 }
 
 section {
- padding: 2% 7%;
+  padding: 2% 7%;
 }
 
 .section-title {
- text-align: center;
- font-size: 2rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .scores {
- display: flex;
- justify-content: space-between;
- align-items: center;
- gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .score-list-section {
- width: 50%;
+  width: 50%;
 }
 
 .add-section {
- width: 50%;
+  width: 50%;
 }
 
 .refresh-title {
- display: flex;
- justify-content: space-around;
- align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #scores-container {
- width: 100%;
- display: flex;
- flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 table {
- border: 1px solid greenyellow;
- border-radius: 6px;
- margin-bottom: 1rem;
- width: 50%;
- padding: 0.5rem;
- background-color: #b2ca9a;
+  border: 1px solid greenyellow;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  width: 50%;
+  padding: 0.5rem;
+  background-color: #b2ca9a;
 }
 
 tr {
- display: grid;
- grid-template-columns: 100px 100px 100px;
- padding: 0.2rem 1rem 0.1rem 0.5rem;
- margin-bottom: 1rem;
- border-bottom: 1px solid #000;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  padding: 0.2rem 1rem 0.1rem 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #000;
 }
