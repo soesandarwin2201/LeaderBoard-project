@@ -8,14 +8,13 @@ const score = document.getElementById('score');
 const refreshBtn = document.getElementById('refresh-btn');
 
 const displayScore = (person, personScore) => {
-
   const tableRow = document.createElement('tr');
   tableRow.classList.add('person-1');
   tableRow.innerHTML = `
    <td class="title">${person}</td>
    <span> : </span>
    <td class="scores">${personScore}</td>`.trim();
-   
+
   container.appendChild(tableRow);
 };
 
