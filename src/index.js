@@ -8,13 +8,14 @@ const score = document.getElementById('score');
 const refreshBtn = document.getElementById('refresh-btn');
 
 const displayScore = (person, personScore) => {
+
   const tableRow = document.createElement('tr');
   tableRow.classList.add('person-1');
   tableRow.innerHTML = `
    <td class="title">${person}</td>
    <span> : </span>
    <td class="scores">${personScore}</td>`.trim();
-
+   
   container.appendChild(tableRow);
 };
 
@@ -29,22 +30,10 @@ form.addEventListener('submit', async (e) => {
 
   name.value = '';
   score.value = '';
-
-  // const scores = await getData();
-  // scores.result.forEach((score) => {
-  //   displayScore(score.user, score.score);
-  // });
-
 });
 
-// document.addEventListener('DOMContentLoaded', async () => {
-//   const scores = await getData();
-//   scores.result.forEach((score) => {
-//     displayScore(score.user, score.score);
-//   });
-// });
-
 refreshBtn.addEventListener('click', async () => {
+  container.innerHTML = ' ';
   const scores = await getData();
   scores.result.forEach((score) => {
     displayScore(score.user, score.score);
