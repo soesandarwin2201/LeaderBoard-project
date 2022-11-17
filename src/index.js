@@ -27,18 +27,22 @@ form.addEventListener('submit', async (e) => {
     score: Number(personScore),
   });
 
-  const scores = await getData();
-  scores.result.forEach((score) => {
-    displayScore(score.user, score.score);
-  });
+  name.value = '';
+  score.value = '';
+
+  // const scores = await getData();
+  // scores.result.forEach((score) => {
+  //   displayScore(score.user, score.score);
+  // });
+
 });
 
-document.addEventListener('DOMContentLoaded', async () => {
-  const scores = await getData();
-  scores.result.forEach((score) => {
-    displayScore(score.user, score.score);
-  });
-});
+// document.addEventListener('DOMContentLoaded', async () => {
+//   const scores = await getData();
+//   scores.result.forEach((score) => {
+//     displayScore(score.user, score.score);
+//   });
+// });
 
 refreshBtn.addEventListener('click', async () => {
   const scores = await getData();
