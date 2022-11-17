@@ -1,12 +1,48 @@
 import './index.css';
-import { addScore, display } from './modules/additems.js';
-import { getID  } from './modules/getapi.js';
+import { postData, getData } from './modules/getapi.js';
 
-// const form = document.getElementById('add-form');
+const form = document.getElementById('add-form');
+const container = document.getElementById('scores-container');
+const name = document.getElementById('name');
+const score = document.getElementById('score');
+const refreshBtn = document.getElementById('refresh-btn');
 
-// form.addEventListener('submit', addScore);
-// window.addEventListener('DOMContentLoaded', display);
+const displayScore = (person, personScore) => {
+  const tableRow = document.createElement('tr');
+  tableRow.classList.add('person-1');
+  tableRow.innerHTML = `
+   <td class="title">${person}</td>
+   <span> : </span>
+   <td class="scores">${personScore}</td>`.trim();
 
-getID();
+  container.appendChild(tableRow);
+};
 
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const person = name.value;
+  const personScore = score.value;
+  await postData({
+    user: person,
+    score: Number(personScore),
+  });
 
+  const scores = await getData();
+  scores.result.forEach((score) => {
+    displayScore(score.user, score.score);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const scores = await getData();
+  scores.result.forEach((score) => {
+    displayScore(score.user, score.score);
+  });
+});
+
+refreshBtn.addEventListener('click', async () => {
+  const scores = await getData();
+  scores.result.forEach((score) => {
+    displayScore(score.user, score.score);
+  });
+});

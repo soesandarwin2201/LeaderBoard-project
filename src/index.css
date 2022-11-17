@@ -46,6 +46,10 @@ section {
   flex-direction: column;
 }
 
+#refresh-btn {
+  font-size: 1.2rem;
+}
+
 table {
   border: 1px solid greenyellow;
   border-radius: 6px;
