@@ -9,6 +9,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   color: #fff;
   width: 100%;
   height: auto;
@@ -28,9 +29,10 @@ section {
   border: #fff 0.1rem solid;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
-  text-shadow: 0 0 .2rem #fff7,
-   0 0 .3rem #14f7ff;
-   box-shadow: inset 0 0 .4rem #14f7ff, 0 0 .5rem #14f7ff;
+  text-shadow:
+    0 0 0.2rem #fff7,
+    0 0 0.3rem #14f7ff;
+  box-shadow: inset 0 0 0.4rem #14f7ff, 0 0 0.5rem #14f7ff;
 }
 
 .scores {
@@ -42,19 +44,34 @@ section {
 
 .score-list-section {
   width: 50%;
+  margin-top: 2rem;
+  border: #14f7ff 0.1rem solid;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border-radius: 0.2rem;
+  box-shadow:
+    inset 0 0 0.5rem #14f7ff,
+    0 0 0.5rem #14f7ff;
+  text-shadow:
+    0 0 0.2rem #fff7,
+    0 0 0.3rem #14f7ff;
+  text-transform: capitalize;
 }
 
 .add-section {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .refresh-title {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.refresh-title {
   margin-bottom: 1rem;
   padding: 1rem 2rem;
 }
@@ -69,23 +86,6 @@ section {
   font-size: 1.2rem;
 }
 
-.score-list-section {
-  margin-top: 2rem;
-  border: #14f7ff .1rem solid;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-  width: 50%;
-  padding: 0.5rem;
-  background-color: transparent;
-  border-radius: .2rem;
-  box-shadow: inset 0 0 .5rem #14f7ff,
-  0 0 .5rem #14f7ff;
-  text-shadow: 0 0 .2rem #fff7,
-  0 0 .3rem #14f7ff;
-  text-transform: capitalize;
-}
-
-
 tr {
   display: grid;
   grid-template-columns: 200px 100px 100px;
@@ -94,22 +94,22 @@ tr {
   border-bottom: #14f7ff 0.1rem solid;
 }
 
-
 button {
   font-size: 1.2rem;
   display: inline-block;
   position: relative;
   cursor: pointer;
   border: #14f7ff 0.1rem solid;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 0.2rem;
   background-color: transparent;
-  text-shadow: 0 0 .2rem #fff7,
-  0 0 .3rem #14f7ff;
-  box-shadow: 
-  inset 0 0 .5rem #14f7ff,
-        0  0 .5rem #14f7ff;
- color: #fff;
+  text-shadow:
+    0 0 0.2rem #fff7,
+    0 0 0.3rem #14f7ff;
+  box-shadow:
+    inset 0 0 0.5rem #14f7ff,
+    0  0 0.5rem #14f7ff;
+  color: #fff;
 }
 
 button:active {
@@ -126,21 +126,13 @@ button::before {
   width: 100%;
   height: 100%;
   background: #14f7ff;
-  transform: 
-  perspective(0.2rem)
-  rotateX(10deg)
-  scale(1.3, 0.4);
+  transform:
+    perspective(0.2rem)
+    rotateX(10deg)
+    scale(1.3, 0.4);
   filter: blur(0.5rem);
   opacity: 0.6;
   pointer-events: none;
-}
-
-.add-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
 }
 
 #add-form {
@@ -149,17 +141,18 @@ button::before {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  border: #14f7ff .1rem solid;
-  border-radius: 6px;
+  border: #14f7ff 0.1rem solid;
   margin-bottom: 1rem;
   width: 50%;
   padding: 0.5rem;
-  background : transparent;
-  border-radius: .2rem;
-  box-shadow: inset 0 0 .5rem #14f7ff,
-  0 0 .5rem #14f7ff;
-  text-shadow: 0 0 .2rem #fff7,
-  0 0 .3rem #14f7ff;
+  background: transparent;
+  border-radius: 0.2rem;
+  box-shadow:
+    inset 0 0 0.5rem #14f7ff,
+    0 0 0.5rem #14f7ff;
+  text-shadow:
+    0 0 0.2rem #fff7,
+    0 0 0.3rem #14f7ff;
   text-transform: capitalize;
 }
 
@@ -169,6 +162,7 @@ input {
   outline: 0;
   color: #fff;
   font-size: 1rem;
+  margin: 1.2rem;
 }
 
 #submit-btn {
@@ -177,7 +171,26 @@ input {
 }
 
 
+@media screen and (max-width : 769px) {
+  .section-title {
+    width: 350px;
+    margin-inline: 2rem;
+  }
 
+  .scores {
+    flex-direction: column;
+  }
 
+  .score-list-section {
+    width: 100%;
+  }
 
-
+  .add-section {
+    width: 100%;
+  }
+  
+  #add-form {
+    width: 350px;
+  }
+  
+}
