@@ -170,8 +170,7 @@ input {
   margin-bottom: 1rem;
 }
 
-
-@media screen and (max-width : 769px) {
+@media screen and (max-width: 769px) {
   .section-title {
     width: 350px;
     margin-inline: 2rem;
@@ -188,9 +187,8 @@ input {
   .add-section {
     width: 100%;
   }
-  
+
   #add-form {
     width: 350px;
   }
-  
 }
