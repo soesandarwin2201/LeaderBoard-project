@@ -27,20 +27,13 @@ form.addEventListener('submit', async (e) => {
     score: Number(personScore),
   });
 
-  const scores = await getData();
-  scores.result.forEach((score) => {
-    displayScore(score.user, score.score);
-  });
-});
+  name.value = '';
+  score.value = ' ';
 
-document.addEventListener('DOMContentLoaded', async () => {
-  const scores = await getData();
-  scores.result.forEach((score) => {
-    displayScore(score.user, score.score);
-  });
 });
 
 refreshBtn.addEventListener('click', async () => {
+  container.innerHTML = ' ';
   const scores = await getData();
   scores.result.forEach((score) => {
     displayScore(score.user, score.score);
