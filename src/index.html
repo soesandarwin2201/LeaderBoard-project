@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>LeaderBoard Project</title>
+ <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+ 
+ <main>
+
+  <section class="section-center">
+   <h1 class="section-title">LeaderBoard</h1>
+   <article class="scores">
+    <div class="score-list-section">
+     <div class="refresh-title">
+     <p class="title">Recent scores</p>
+     <button><i class="uil uil-sync" id="refresh-btn"></i></button>
+    </div>
+
+    <table id="scores-container"></table>
+    </div>
+    
+    <div class="add-section">
+     <h1 class="add-title section-title">Add your score</h1>
+
+     <form action="" id="add-form" method="get">
+      
+      <input type="text" id="name" name="name" placeholder="Your name">
+      <input type="text" id="score" name="score" placeholder="Your score">
+      <button type="submit" id="submit-btn">Submit</button>
+
+     </form>
+    </div>
+   </article>
+  </section>
+ </main>
+
+</body>
+</html>
