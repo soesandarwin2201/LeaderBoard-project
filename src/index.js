@@ -28,7 +28,7 @@ form.addEventListener('submit', async (e) => {
   });
 
   name.value = '';
-  score.value = '';
+  score.value = ' ';
 });
 
 refreshBtn.addEventListener('click', async () => {

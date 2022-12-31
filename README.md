@@ -20,14 +20,30 @@
 
 To get a local copy up and running follow these simple example steps.
 
+### Clone the repository
+
+ - git clone https://github.com/soesandarwin2201/LeaderBoard-project
+
+### Navigate to the folder
+
+- cd LeaderBoard-project
+
 ## live version
 
 ### Prerequisites
-- A simple web browser (preferably Chrome or Firefox)
-- An IDE
+
+A Web Browser (preferably Google Chrome)
 
 ### Setup
-- Download this repository and open index.html file.
+
+- Clone the GitHub Repository
+- run this commands in your terminal:
+     - `npm install`
+     - `npm run build`
+     - `npm start`
+
+### Usage
+after running `npm start` the website will be opened automatically on your default browser.
 
 ## Authors
 
@@ -38,3 +54,14 @@ To get a local copy up and running follow these simple example steps.
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
+
+## Acknowledgments
+
+- Microverse offered guidance on how to make the project more professional
+
+
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
+
