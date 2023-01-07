@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Awesome Books 
+# LeaderBoard
 
-> This is the simple to do list: using webpack that shows of my accomplishments as a software developer.In this project  we learn how to setup the webpack and nodemodules. This project do the to-do-list add , remove and edit function with local storage.
+> This is the simple LearderBoard: using webpack that shows of my accomplishments as a software developer.In this project  we learn how to setup the webpack and nodemodules. This project do the add , function with local storage.
 
 
 ## Built With
